@@ -12,7 +12,6 @@ MyTest = type('MyTest', (TestCase, ), {'cases:': [1, 2, 3],
 
 # suite = unittest.defaultTestLoader.loadTestsFromTestCase(MyTest)
 # unittest.main()
-
 # 自定义元类来实现动态创建测试类和测试方法
 # 什么时候需要用到元类：
 #     1. 动态创建类，在创建类的过程中要自定义类属性和方法

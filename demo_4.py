@@ -8,8 +8,6 @@ from ddt import ddt
 from ddt import data
 import time
 # 匿名函数， 一般给函数传参数
-
-
 # filter 函数： 过滤器
 #  参数1 过滤规则函数 --- 通常用匿名函数去写这个规则
 #  参数2 可迭代对象

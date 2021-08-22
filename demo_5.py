@@ -13,7 +13,6 @@ import time
 #     rows = openpyxl.load_workbook(file)[sheet].rows
 #     titles = [t.value for t in next(rows)]
 #     return [dict(zip(titles, [s.value for s in item])) for item in rows]
-
 # 通用装饰器， 既可以装饰有参数的函数，也可以装饰无参数函数
 #  闭包函数定义不定长参数， *args， **kwargs, 让被装饰的函数自由传入参数
 

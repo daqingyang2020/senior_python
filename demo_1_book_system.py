@@ -62,7 +62,7 @@ class Books:
             self.add_book()
 
     def modify_book(self):
-        """修改"""
+        """修改 """
         print('************modify book**********')
         book_id = input('input the book id: ')
         sql = 'select * from books where id = {}'.format(book_id)

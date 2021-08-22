@@ -9,13 +9,13 @@ from ddt import ddt
 from ddt import data
 from functools import wraps
 
+
 # # 函数对象同样可以设置属性
 # # 将定义的函数名看作对象，可以对其设置属性，即对象属性， 不同于函数内部定义的变量
 # 当然对于python已经定义的int, str, list等对象，不可对其设置属性
 # def away():
 #     go = 2
 #     return go
-
 # setattr(away, 'abc', 'new')
 # print(getattr(away, 'abc')) # 'new'
 

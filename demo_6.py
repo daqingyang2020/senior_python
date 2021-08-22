@@ -8,13 +8,13 @@ import random
 from functools import wraps
 from functools import lru_cache
 
-
 #  内置装饰器 官方
 # 1. functools.wraps: 用来消除装饰器的副作用(装饰后函数的名称，属性等不是原函数的)
 # 2. functools.lru_cashe: 缓存装饰器， 一般用在递归上， 相同入参的函数结果缓存起来， 做到不重复调用
 #     两个参数： maxsize参数设置缓存内存占用上限， 其值应当设为2幂， 值为None时表示无上限
 #             typed 参数设置表示不同参数类型的调用是否分别缓存，如果设为True， 则fibonacci(5)，
 #             fibonacci(5.0)将分别缓存
+
 
 def star(come):
 
