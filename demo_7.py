@@ -145,7 +145,7 @@ print(l1-l2)
 #     money设置为int类型数据  data可以设置为任意类型
 #     3、通过相关机制实现，data 属性不能进行删除
 #     4、当money设置的值少于0时，确保查询出来的值为0，
-class School:
+class School(object):  # 继承父类object
     __slots__ = ['title', 'money', 'data']
 
     def __init__(self, title='university', money=100, data='Shanghai'):
@@ -159,7 +159,9 @@ class School:
             raise ValueError('Can not delete data property')
         else:
             # 不能调用delattr, 否则还是回到__delattr__，死循环
+            # object.__delattr__(self, item) 通过父类类名调用
             super(School, self).__delattr__(item)
+
         pass
 
     def __setattr__(self, key, value):
