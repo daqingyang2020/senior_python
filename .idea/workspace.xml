@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1c569e5-5beb-4af7-8102-9dbce89d3c9b" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/demo_8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/henry.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/senior_python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/senior_python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_5_ddt.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_5_ddt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_8.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +56,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -60,7 +64,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.demo_8">
-    <configuration name="demo_5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="demo_5_ddt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,7 +76,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_5.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_5_ddt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -81,49 +85,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_6" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="senior_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_6.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="demo_7" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="senior_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_7.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="demo_8" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="demo_8" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,7 +106,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest in demo_5_ddt.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in demo_5_ddt.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,27 +115,16 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/demo_5_ddt.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <list>
-      <item itemvalue="Python.demo_5" />
-      <item itemvalue="Python.demo_6" />
-      <item itemvalue="Python.demo_7" />
-      <item itemvalue="Python.demo_8" />
-      <item itemvalue="Python tests.pytest in demo_5_ddt.py" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.demo_8" />
-        <item itemvalue="Python.demo_7" />
-        <item itemvalue="Python.demo_6" />
-        <item itemvalue="Python tests.pytest in demo_5_ddt.py" />
-        <item itemvalue="Python.demo_5" />
+        <item itemvalue="Python tests.Unittests in demo_5_ddt.py" />
+        <item itemvalue="Python.demo_5_ddt" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629691748846</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1629691966564</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629691966564</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -226,6 +184,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
@@ -233,35 +192,69 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="125" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
-    <state x="125" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" />
-    <state x="363" y="267" key="#com.intellij.fileTypes.FileTypeChooser" />
-    <state x="363" y="267" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.920@0.0.1440.920" />
-    <state x="813" y="273" key="#xdebugger.evaluate" />
-    <state x="813" y="273" key="#xdebugger.evaluate/0.0.1440.920@0.0.1440.920" />
-    <state width="1419" height="383" key="GridCell.Tab.0.bottom" />
-    <state width="1419" height="383" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" />
-    <state width="1419" height="383" key="GridCell.Tab.0.center" />
-    <state width="1419" height="383" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" />
-    <state width="1419" height="383" key="GridCell.Tab.0.left" />
-    <state width="1419" height="383" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" />
-    <state width="1419" height="383" key="GridCell.Tab.0.right" />
-    <state width="1419" height="383" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" />
-    <state width="1419" height="278" key="GridCell.Tab.1.bottom" />
-    <state width="1419" height="278" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" />
-    <state width="1419" height="278" key="GridCell.Tab.1.center" />
-    <state width="1419" height="278" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" />
-    <state width="1419" height="278" key="GridCell.Tab.1.left" />
-    <state width="1419" height="278" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" />
-    <state width="1419" height="278" key="GridCell.Tab.1.right" />
-    <state width="1419" height="278" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" />
-    <state x="227" y="208" key="SettingsEditor" />
-    <state x="227" y="208" key="SettingsEditor/0.0.1440.920@0.0.1440.920" />
-    <state width="727" height="417" key="XDebugger.FullValuePopup" />
-    <state width="727" height="417" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" />
-    <state x="276" y="192" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" />
-    <state x="276" y="192" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.920@0.0.1440.920" />
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" />
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" />
+    <state x="161" y="204" width="1089" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629711696310">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="161" y="204" width="1089" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1629711696310" />
+    <state x="363" y="267" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629691767622" />
+    <state x="363" y="267" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.920@0.0.1440.920" timestamp="1629691767622" />
+    <state x="383" y="322" width="640" height="598" key="#xdebugger.evaluate" timestamp="1629713751370">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="383" y="322" width="640" height="598" key="#xdebugger.evaluate/0.0.1440.920@0.0.1440.920" timestamp="1629713751370" />
+    <state x="73" y="162" width="1240" height="717" key="DiffContextDialog" timestamp="1629707433108">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="73" y="162" width="1240" height="717" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1629707433108" />
+    <state width="1419" height="357" key="GridCell.Tab.0.bottom" timestamp="1629714016827">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1419" height="357" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1629714016827" />
+    <state width="1419" height="357" key="GridCell.Tab.0.center" timestamp="1629714016827">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1419" height="357" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1629714016827" />
+    <state width="1419" height="357" key="GridCell.Tab.0.left" timestamp="1629714016826">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1419" height="357" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1629714016826" />
+    <state width="1419" height="357" key="GridCell.Tab.0.right" timestamp="1629714016827">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1419" height="357" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1629714016827" />
+    <state width="1419" height="383" key="GridCell.Tab.1.bottom" timestamp="1629713893658">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1419" height="383" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1629713893658" />
+    <state width="1419" height="383" key="GridCell.Tab.1.center" timestamp="1629713893657">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1419" height="383" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1629713893657" />
+    <state width="1419" height="383" key="GridCell.Tab.1.left" timestamp="1629713893657">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1419" height="383" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1629713893657" />
+    <state width="1419" height="383" key="GridCell.Tab.1.right" timestamp="1629713893658">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="1419" height="383" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1629713893658" />
+    <state x="183" y="137" key="SettingsEditor" timestamp="1629713503672">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="183" y="137" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1629713503672" />
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1629691973407">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1629691973407" />
+    <state width="727" height="417" key="XDebugger.FullValuePopup" timestamp="1629709378783">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state width="727" height="417" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1629709378783" />
+    <state x="276" y="192" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1629713548664">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="276" y="192" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.920@0.0.1440.920" timestamp="1629713548664" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1629691767622" />
+    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1629691767622" />
   </component>
 </project>
