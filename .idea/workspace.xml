@@ -20,11 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1c569e5-5beb-4af7-8102-9dbce89d3c9b" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/henry.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/senior_python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/senior_python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_5_ddt.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_5_ddt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demo_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_8.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,9 +116,32 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in demo_8.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="senior_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/demo_8.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.demo_5_ddt" />
+      <item itemvalue="Python.demo_8" />
+      <item itemvalue="Python tests.Unittests in demo_5_ddt.py" />
+      <item itemvalue="Python tests.pytest in demo_8.py" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.demo_8" />
+        <item itemvalue="Python tests.pytest in demo_8.py" />
         <item itemvalue="Python tests.Unittests in demo_5_ddt.py" />
         <item itemvalue="Python.demo_5_ddt" />
       </list>
@@ -161,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629691966564</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1629714055356</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629714055356</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -192,64 +218,72 @@
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="161" y="204" width="1089" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629711696310">
+    <state x="431" y="282" key="#Notifications" timestamp="1629790199452">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="161" y="204" width="1089" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1629711696310" />
+    <state x="431" y="282" key="#Notifications/0.0.1440.920@0.0.1440.920" timestamp="1629790199452" />
+    <state x="161" y="204" width="1089" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629785015855">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="161" y="204" width="1089" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1629785015855" />
     <state x="363" y="267" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629691767622" />
     <state x="363" y="267" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.920@0.0.1440.920" timestamp="1629691767622" />
-    <state x="383" y="322" width="640" height="598" key="#xdebugger.evaluate" timestamp="1629713751370">
+    <state x="800" y="322" width="640" height="598" key="#xdebugger.evaluate" timestamp="1629796379239">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="383" y="322" width="640" height="598" key="#xdebugger.evaluate/0.0.1440.920@0.0.1440.920" timestamp="1629713751370" />
+    <state x="800" y="322" width="640" height="598" key="#xdebugger.evaluate/0.0.1440.920@0.0.1440.920" timestamp="1629796379239" />
     <state x="73" y="162" width="1240" height="717" key="DiffContextDialog" timestamp="1629707433108">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="73" y="162" width="1240" height="717" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1629707433108" />
-    <state width="1419" height="357" key="GridCell.Tab.0.bottom" timestamp="1629714016827">
+    <state width="1419" height="274" key="GridCell.Tab.0.bottom" timestamp="1629796821517">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="357" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1629714016827" />
-    <state width="1419" height="357" key="GridCell.Tab.0.center" timestamp="1629714016827">
+    <state width="1419" height="274" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1629796821517" />
+    <state width="1419" height="274" key="GridCell.Tab.0.center" timestamp="1629796821516">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="357" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1629714016827" />
-    <state width="1419" height="357" key="GridCell.Tab.0.left" timestamp="1629714016826">
+    <state width="1419" height="274" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1629796821516" />
+    <state width="1419" height="274" key="GridCell.Tab.0.left" timestamp="1629796821516">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="357" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1629714016826" />
-    <state width="1419" height="357" key="GridCell.Tab.0.right" timestamp="1629714016827">
+    <state width="1419" height="274" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1629796821516" />
+    <state width="1419" height="274" key="GridCell.Tab.0.right" timestamp="1629796821517">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="357" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1629714016827" />
-    <state width="1419" height="383" key="GridCell.Tab.1.bottom" timestamp="1629713893658">
+    <state width="1419" height="274" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1629796821517" />
+    <state width="1419" height="274" key="GridCell.Tab.1.bottom" timestamp="1629796821517">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="383" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1629713893658" />
-    <state width="1419" height="383" key="GridCell.Tab.1.center" timestamp="1629713893657">
+    <state width="1419" height="274" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1629796821517" />
+    <state width="1419" height="274" key="GridCell.Tab.1.center" timestamp="1629796821517">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="383" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1629713893657" />
-    <state width="1419" height="383" key="GridCell.Tab.1.left" timestamp="1629713893657">
+    <state width="1419" height="274" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1629796821517" />
+    <state width="1419" height="274" key="GridCell.Tab.1.left" timestamp="1629796821517">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="383" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1629713893657" />
-    <state width="1419" height="383" key="GridCell.Tab.1.right" timestamp="1629713893658">
+    <state width="1419" height="274" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1629796821517" />
+    <state width="1419" height="274" key="GridCell.Tab.1.right" timestamp="1629796821517">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="383" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1629713893658" />
+    <state width="1419" height="274" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1629796821517" />
     <state x="183" y="137" key="SettingsEditor" timestamp="1629713503672">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state x="183" y="137" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1629713503672" />
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1629691973407">
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1629714061357">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1629691973407" />
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1629714061357" />
     <state width="727" height="417" key="XDebugger.FullValuePopup" timestamp="1629709378783">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
     <state width="727" height="417" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1629709378783" />
+    <state x="516" y="372" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1629770019677">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="516" y="372" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.920@0.0.1440.920" timestamp="1629770019677" />
     <state x="276" y="192" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1629713548664">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
