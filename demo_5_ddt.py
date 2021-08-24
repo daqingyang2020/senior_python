@@ -35,6 +35,7 @@ def my_data(*args):  # 传入参数不固定
 def update_test(func, value):
     @wraps(func)
     def inn(self, *args, **kwargs):
+        # result = func(self, value, *args, **kwargs)  # 调用方法
         result = func(self, value, *args, **kwargs)  # 调用方法
         return result
     return inn  # 返回inn函数， unittest认为此是测试用例, 使用wraps装饰
@@ -68,12 +69,12 @@ class TestNew(unittest.TestCase):
 
     @my_data(11, 22, 33)
     def test_func(self, case):
-        print(case)
+        print('test_func', case)
         pass
 
     @my_data(121, 212, 353)
     def test_login(self, case):
-        print(case)
+        print('test_login', case)
         pass
 
     def test_other(self):

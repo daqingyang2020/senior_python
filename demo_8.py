@@ -4,6 +4,7 @@
 # @Author : Henry
 from unittest import TestCase
 import unittest
+from datetime import datetime
 
 # 面向对象 - 封装 继承 多态（伪多态，对数据类型没有严格限制）
 # 复习
@@ -15,6 +16,7 @@ import unittest
     # 内置函数iter: 参数可以是实现迭代协议__iter__方法的任意类型对象
     # 函数len(): 调用对象的__len__魔术方法
 """
+
 
 # 多继承的应用
 # 定义一个api测试的用例类
@@ -67,42 +69,72 @@ type 动态创建类：
     参数2：bases 继承的父类 （元组）
     参数3：dict 类的属性和方法 （字典）
 """
-# 通过type定义的类, 一般用不到
+
+# 通过type定义的类, 元类一般用不到
 MyNew = type('MyNew', (object,), {'name': 'henry'})
 print(MyNew)
-
-# 使用type去创建用例类
-MyTest = type('MyTest', (TestCase, ), {'cases:': [1, 2, 3],
-                                       'test_1': lambda x: x,
-                                       'test_2': lambda x: x})
+# 通过type动态生成测试类
+# test_1, test_2 unittest用的测试方法，无法写测试方法逻辑
+# MyTest = type('MyTest', (TestCase, ), {'cases:': [1, 2, 3],
+#                                        'test_1': lambda x: x,
+#                                        'test_2': lambda x: x})
 
 # suite = unittest.defaultTestLoader.loadTestsFromTestCase(MyTest)
 # unittest.main()
-# 自定义元类来实现动态创建测试类和测试方法
+"""====自定义元类来实现动态创建测试类和测试方法===="""
+
+
+# 生成测试类的时候，根据测试数据去动态生成测试方法
 # 什么时候需要用到元类：
-#     1. 动态创建类，在创建类的过程中要自定义类属性和方法
+#     1. 动态创建类，在创建类的过程中需要自定义类属性和方法
+# 需求： 自定义元类来动态创建测试类和测试方法
 
 
+def test_value(funny, value):
+    def inner(self, *args, **kwargs):
+        result = funny(self, value, *args, **kwargs)
+        return result
+
+    return inner
+    pass
+
+
+# 继承元类type , class type(object) type 继承了object
 class MyMateClass(type):
 
+    # 通过类创建对象
     def __new__(cls, name, bases, attr, *args, **kwargs):
-        # 通过元类创建一个类
+        # 通过元类创建一个类， 调用父类的方法
         test_cls = super(MyMateClass, cls).__new__(cls, name, bases, attr)
-        # 遍历属性Cases
+        funny = getattr(test_cls, 'perform')
+        # 根据传入的测试数据 参数attr ，来遍历这个属性Cases - attr['Cases']
         for index, case in enumerate(attr['Cases']):
-            # 动态给test_cls这个类添加方法
-            setattr(test_cls, 'test_{}'.format(index), lambda x: x)
+            # 动态给test_cls这个类添加属性 - 测试方法
+            # 方法使用继承自BaseApiCase中的test_perform
+            method = test_value(funny, case)
+            setattr(test_cls, 'test_{}'.format(index), method)
+        # else: # 不能删除,继承自父类的方法属性, 修改方法名,让unittest不认为是测试方法
+        #     delattr(test_cls, 'test_perform')
+        # 返回测试类
         return test_cls
 
 
     pass
 
 
+# 通过自定义的元类创建了一个类
+# Henry = MyMateClass('Henry', (object, ), {})
+# 传入的用例数据Cases， 然后根据用例数据动态生成测试方法
+# Henry = MyMateClass('Henry', (unittest.TestCase, ), {'Cases': [1, 23, 13]})
+#
+# print()
+
+
 class BaseApiCase:
     """用例执行的基类"""
 
-    def test_perform(self, case):
-        """用例执行方法"""
+    def perform(self, case):
+        """用例执行方法, 接收用例数据case"""
         print('test cases:', case)
         # 1. 用例数据的处理
         # 2. 接口请求
@@ -111,22 +143,34 @@ class BaseApiCase:
         pass
 
 
-my = MyMateClass('Henry', (unittest.TestCase, BaseApiCase),
+# 继承unittest.TestCase， 再继承BaseApiCase 用来使用其用例测试方法
+My = MyMateClass('Henry', (unittest.TestCase, BaseApiCase),
                  {'Cases': [1, 2, 33]})
-print(my)
+print(My)
+# suite = unittest.defaultTestLoader.loadTestsFromTestCase(My)
+# unittest.main()
+
+
+'''====================homework======================'''
+
+
+# 1、自定义一个元类，可以在创建类的时候，自动给类添加（class_name,create_time）
+# 这两个类属性，属性值自己随便写一个
+class Custom(type):
+    def __new__(mcs, name, bases, attr):
+        my_cls = super(Custom, mcs).__new__(mcs, name, bases, attr)
+        setattr(my_cls, 'class_name', name)
+        setattr(my_cls, 'create_time', datetime.today())
+        return my_cls
+
+
+Peter = Custom('Peter', (object, ), {})
+print(getattr(Peter, 'class_name'))
+print(getattr(Peter, 'create_time'))
+# 2、实现上课写的通过元类生成用例的案例代码
 
 
 """
-1、自定义一个元类，可以在创建类的时候，自动给类添加（class_name,create_time）
-这两个类属性，属性值自己随便写一个
-
-
-2、实现上课写的通过元类生成用例的案例代码
-
-
-
-
-
 说明：以下面试扩展算法题，和上课内容无关，不计分，不是必做题
 扩展1：
 有一艘船上有40个人，由于触礁出现了漏水，现在船上最多只能载20个人，需要20个人下船。
