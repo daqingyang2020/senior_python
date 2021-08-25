@@ -36,3 +36,11 @@ si = copy.deepcopy(li)
 a.pop()
 print(li)
 print(si)
+
+
+ll = []
+di = dict(name='Henry', age=18)
+ll.append(di)
+
+print(id(di))
+print(id(ll[0]))
