@@ -216,6 +216,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/demo_8.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
@@ -224,9 +225,9 @@
     <list>
       <item itemvalue="Python.demo_5_ddt" />
       <item itemvalue="Python.demo_8" />
+      <item itemvalue="Python.demo_9" />
       <item itemvalue="Python tests.Unittests in demo_5_ddt.py" />
       <item itemvalue="Python tests.pytest in demo_8.py" />
-      <item itemvalue="Python.demo_9" />
     </list>
     <recent_temporary>
       <list>

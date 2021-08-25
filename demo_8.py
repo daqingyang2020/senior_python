@@ -215,14 +215,14 @@ print('Total Leave people:', len(leave))
 print(leave)
 
 #
-people2 = [person for person in range(1, 41)]
+people = [person for person in range(1, 41)]
 
 
 def leave_people(remain):
     take_off = []
     flag = 8
     while len(remain) > 20:
-        each = people2.pop(flag)
+        each = people.pop(flag)
         take_off.append(each)
         current_len = len(remain)
         if current_len == 20:
@@ -235,7 +235,7 @@ def leave_people(remain):
 
 
 print('use function:')
-ll = leave_people(people2)
+ll = leave_people(people)
 print(ll, len(ll))
 
 
@@ -262,7 +262,7 @@ def fall(height, times):
     pass
 
 
-print(fall(100, 10))
+print('The ball has gone:', fall(100, 10))
 
 """
 扩展3
@@ -289,7 +289,7 @@ def rabbit(month):
     pass
 
 
-print(rabbit(6))
+print('There are rabbits:', rabbit(6))
 
 # 扩展4：有时间的小伙伴 可以尝试利用讲的元类的思想 自己封装测试框架
 
