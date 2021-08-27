@@ -4,6 +4,8 @@
 # @Author : Henry
 from unittest import TestCase
 import unittest
+import yaml
+import json
 from datetime import datetime
 
 # 面向对象 - 封装 继承 多态（伪多态，对数据类型没有严格限制）
@@ -149,7 +151,21 @@ print(My)
 # suite = unittest.defaultTestLoader.loadTestsFromTestCase(My)
 # unittest.main()
 
+with open('case.json', 'r') as file:
+    cases = json.load(file)
+    # 第二种
+    # result = file.read()
+    # cases = json.loads(result)
 
+print(cases)
+cases_dict = dict(Cases=cases)
+MyData = MyMateClass('Henry', (unittest.TestCase, BaseApiCase), cases_dict)
+
+# yaml配置文件读取
+with open('api_data.yml', 'r') as f2:
+    cases2 = yaml.load(f2, Loader=yaml.SafeLoader)
+
+print(cases2)
 '''====================homework======================'''
 
 

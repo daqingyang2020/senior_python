@@ -1,0 +1,4 @@
+login:
+    URL: 'http://10.2.6.88:8080'
+    USER: 'qingyang.da'
+    PASSWD: 'Henry@0225'
