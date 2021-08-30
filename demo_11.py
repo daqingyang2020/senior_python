@@ -9,6 +9,9 @@ from queue import Queue
 from queue import LifoQueue
 from queue import PriorityQueue
 from multiprocessing import Process
+from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
+import requests
 # 进程模块中也有Queue类，设置下别名区分
 from multiprocessing import Queue as ProcessQueue
 
@@ -234,7 +237,48 @@ def add2():
 # 初始化Pool时,可以指定一个最大进程数,当有新的请求提交到Pool中时,
 # 如果池还没有满, 那么就会创建一个新的进程来执行该请求; 但如果池中的进程数已经达到指定的最大值,
 # 那么请求就会等待, 直到池中的进程被释放, 才会用之前的进程来执行新的任务
+# Pool常用方法： from multiprocessing import Pool
+# apply_async(func[,args[,kwds]]): 使用非阻塞方式调用func（并行执行，阻塞方式必须等待上一个进程退出才能执行下一个进程），
+# args为传递给func的参数列表， kwds为传递给func的关键字参数列表
+# close(): 关闭Pool， 使其不再接受新的任务
+# join(): 主进程阻塞，等待子进程的退出， 必须在close之后使用
 
+
+# 主要使用 concurrent.futures  ThreadPoolExecutor, ProcessPoolExecutor
+# 线程池的使用
+URLS = ['http://www.foxnews.com/',
+        'http://www.baidu.com/',
+        'http://europe.wsj.com/',
+        'http://www.bbc.co.uk/',
+        'http://some-made-up-domain.com/']
+
+
+def load_url(url):
+    result = requests.get(url)
+    print('url:', url, result)
+
+
+# max_workers 最多并发执行5个任务， 如有其余任务，会等待
+# with ThreadPoolExecutor(max_workers=5) as tp:
+#     # 提交任务给线程池， 第一个参数执行函数，之后参数为执行函数的参数
+#     tp.submit(load_url, URLS[0])
+#     tp.submit(load_url, URLS[1])
+#     # 等待所有线程执行结束
+#     tp.shutdown(wait=True)
+#     print('all are done')
+
+
+print('--main thread--')
+
+if __name__ == '__main__':
+    with ProcessPoolExecutor(max_workers=5) as pp:
+        # 提交任务给线程池， 第一个参数执行函数，之后参数为执行函数的参数
+        pp.submit(load_url, URLS[0])
+        pp.submit(load_url, URLS[1])
+        # 等待所有线程执行结束
+        pp.shutdown(wait=True)
+        print('all are done')
+print('--main process--')
 """=======homework============="""
 # 按照下列需求实现一个生产者消费者模式:
 # 1、用一个队列来存储数据
