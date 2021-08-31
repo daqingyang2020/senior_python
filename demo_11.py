@@ -50,19 +50,19 @@ q.put('python02')
 # task_done , join
 # task_done 先队列发出一条任务完成的信号
 # join 等待队列中的任务执行全部完毕
-# qq = Queue(3)
-# qq.put(11)
-# qq.put(22)
-# qq.put(33)
+qq = Queue(3)
+qq.put(11)
+qq.put(22)
+qq.put(33)
 # qq.get()
 # qq.get()
 # qq.get()
-# qq.task_done()
-# qq.task_done()
-# qq.task_done()
-# print('join - 1')
-# qq.join()
-# print('join - 2')
+qq.task_done()
+qq.task_done()
+qq.task_done()
+print('join - 1')
+qq.join()
+print('join - 2')
 
 #  LifoQueue  先入后出
 # lq = LifoQueue()
@@ -311,7 +311,7 @@ def consume_data(queue):
 
 
 if __name__ == '__main__':
-    from multiprocessing import Queue as ProcessQueue
+    pass
     my_queue = ProcessQueue()
     with ProcessPoolExecutor(max_workers=6) as pool:
         pool.submit(generate_data, my_queue)
