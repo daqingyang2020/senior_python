@@ -27,74 +27,74 @@ q.put('python02')
 # q.put('python03', timeout=1)  # 参数timeout设置等待时间, raise Full
 
 # 方法: 获取队列中数据的长度
-ll = q.qsize()
-print(ll)
+# ll = q.qsize()
+# print(ll)
 
 # 获取数据 get, 当队列为空, 再get会阻塞
-data = q.get()
-print(data)
-data = q.get()
-print(data)
+# data = q.get()
+# print(data)
+# data = q.get()
+# print(data)
 # data = q.get(timeout=1) # raise Empty
 
 # 添加数据不等待， 数据已满的话直接报错
-q.put_nowait('python03')
+# q.put_nowait('python03')
 
 # 获取数据不等待，
-q.get_nowait()  # q.get(block=False)
+# q.get_nowait()  # q.get(block=False)
 
 # 判断队列是否为空， 判断队列是否已满
-q.empty()  # True or False
-q.full()
-print('--')
+# q.empty()  # True or False
+# q.full()
+# print('--')
 # task_done , join
 # task_done 先队列发出一条任务完成的信号
 # join 等待队列中的任务执行全部完毕
-qq = Queue(3)
-qq.put(11)
-qq.put(22)
-qq.put(33)
-qq.get()
-qq.get()
-qq.get()
-qq.task_done()
-qq.task_done()
-qq.task_done()
-print('join - 1')
-qq.join()
-print('join - 2')
+# qq = Queue(3)
+# qq.put(11)
+# qq.put(22)
+# qq.put(33)
+# qq.get()
+# qq.get()
+# qq.get()
+# qq.task_done()
+# qq.task_done()
+# qq.task_done()
+# print('join - 1')
+# qq.join()
+# print('join - 2')
 
 #  LifoQueue  先入后出
-lq = LifoQueue()
-lq.put(11)
-lq.put(22)
-print(lq.get())  # 继承方法的思想
+# lq = LifoQueue()
+# lq.put(11)
+# lq.put(22)
+# print(lq.get())  # 继承方法的思想
 
 # PriorityQueue 优先级队列 可以设置优先级 (优先级， 数据）
-lp = PriorityQueue()
-lp.put((2, '222'))
-lp.put((6, '126'))
-lp.put((3, '123'))
+# lp = PriorityQueue()
+# lp.put((2, '222'))
+# lp.put((6, '126'))
+# lp.put((3, '123'))
 # 优先级数值越小， 优先级越高， 越先出队列
-print(lp.get())
+# print(lp.get())
 
 # 通过队列保证线程数据的安全性
-que = Queue()
-que.put(0)
+# que = Queue()
+# que.put(0)
 
 
-def work1():
-    for i in range(100000):
-        a = que.get()
-        a += 1
-        que.put(a)
-
-
-def work2():
-    for i in range(100000):
-        a = que.get()
-        a += 1
-        que.put(a)
+# def work1():
+#     for i in range(100000):
+#         a = que.get()
+#         a += 1
+#         que.put(a)
+#
+#
+# def work2():
+#     for i in range(100000):
+#         a = que.get()
+#         a += 1
+#         que.put(a)
 
 
 """ ==== 进程 ==== """
@@ -246,16 +246,16 @@ def add2():
 
 # 主要使用 concurrent.futures  ThreadPoolExecutor, ProcessPoolExecutor
 # 线程池的使用
-URLS = ['http://www.foxnews.com/',
-        'http://www.baidu.com/',
-        'http://europe.wsj.com/',
-        'http://www.bbc.co.uk/',
-        'http://some-made-up-domain.com/']
-
-
-def load_url(url):
-    result = requests.get(url)
-    print('url:', url, result)
+# URLS = ['http://www.foxnews.com/',
+#         'http://www.baidu.com/',
+#         'http://europe.wsj.com/',
+#         'http://www.bbc.co.uk/',
+#         'http://some-made-up-domain.com/']
+#
+#
+# def load_url(url):
+#     result = requests.get(url)
+#     print('url:', url, result)
 
 
 # max_workers 最多并发执行5个任务， 如有其余任务，会等待
@@ -268,24 +268,60 @@ def load_url(url):
 #     print('all are done')
 
 
-print('--main thread--')
+# print('--main thread--')
 
-if __name__ == '__main__':
-    with ProcessPoolExecutor(max_workers=5) as pp:
-        # 提交任务给线程池， 第一个参数执行函数，之后参数为执行函数的参数
-        pp.submit(load_url, URLS[0])
-        pp.submit(load_url, URLS[1])
-        # 等待所有线程执行结束
-        pp.shutdown(wait=True)
-        print('all are done')
-print('--main process--')
+# if __name__ == '__main__':
+#     with ProcessPoolExecutor(max_workers=5) as pp:
+#         # 提交任务给线程池， 第一个参数执行函数，之后参数为执行函数的参数
+#         pp.submit(load_url, URLS[0])
+#         pp.submit(load_url, URLS[1])
+#         # 等待所有线程执行结束
+#         pp.shutdown(wait=True)
+#         print('all are done')
+#     print('--main process--')
+
 """=======homework============="""
+
+
 # 按照下列需求实现一个生产者消费者模式:
 # 1、用一个队列来存储数据
 # 2、创建一个专门生产数据的任务函数，循环生产数据，当队列中数据数量少于50时，开始生产数据，
 # 每次生产200个数据，添加到队列中，每生产完一轮 暂停1秒
 
-# 3、创建一个专门获取数据的 任务函数  ，循环获取数据，
-# 当队列中数据数量  大于10时就开始获取，,循环获取，每次获取20个。当 队列中数据数量  少于10的时候，暂停2秒
+# 3、创建一个专门获取数据的 任务函数，循环获取数据，
+# 当队列中数据数量  大于10时就开始获取，循环获取，每次获取20个。当 队列中数据数量少于10的时候，暂停2秒
 
 # 4、 创建一个进程执行生产数据的任务函数 ，5个进程执行获取数据的任务函数
+def generate_data(queue):
+    data = 0
+    while True:
+        if queue.qsize() < 50:
+            for dd in range(data, data + 200):
+                queue.put(dd)
+            sleep(1)
+
+
+def consume_data(queue):
+    while True:
+        if queue.qsize() >= 10:
+            for j in range(20):
+                queue.get()
+        else:
+            sleep(2)
+
+
+if __name__ == '__main__':
+    from multiprocessing import Queue as ProcessQueue
+    my_queue = ProcessQueue()
+    with ProcessPoolExecutor(max_workers=6) as pool:
+        pool.submit(generate_data, my_queue)
+        for i in range(5):
+            pool.submit(consume_data, my_queue)
+        pool.shutdown()
+
+    # my_queue = Queue()
+    # with ThreadPoolExecutor(max_workers=6) as pool:
+    #     pool.submit(generate_data, my_queue)
+    #     for i in range(5):
+    #         pool.submit(consume_data, my_queue)
+    #     pool.shutdown()
