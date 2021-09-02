@@ -14,6 +14,8 @@ from concurrent.futures import ThreadPoolExecutor
 import requests
 # 进程模块中也有Queue类，设置下别名区分
 from multiprocessing import Queue as ProcessQueue
+# 进程池中使用Manager().Queue()
+from multiprocessing import Manager
 
 # 队列
 # 队列模块 内置模块
@@ -22,8 +24,8 @@ from multiprocessing import Queue as ProcessQueue
 q = Queue(2)  # 若满了,会阻塞
 # 队列添加数据
 # 队列操作的方法: put
-q.put('python01')
-q.put('python02')
+# q.put('python01')
+# q.put('python02')
 # q.put('python03', timeout=1)  # 参数timeout设置等待时间, raise Full
 
 # 方法: 获取队列中数据的长度
@@ -50,19 +52,19 @@ q.put('python02')
 # task_done , join
 # task_done 先队列发出一条任务完成的信号
 # join 等待队列中的任务执行全部完毕
-qq = Queue(3)
-qq.put(11)
-qq.put(22)
-qq.put(33)
-# qq.get()
-# qq.get()
-# qq.get()
-qq.task_done()
-qq.task_done()
-qq.task_done()
-print('join - 1')
-qq.join()
-print('join - 2')
+# qq = Queue(3)
+# qq.put(11)
+# qq.put(22)
+# qq.put(33)
+# # qq.get()
+# # qq.get()
+# # qq.get()
+# qq.task_done()
+# qq.task_done()
+# qq.task_done()
+# print('join - 1')
+# qq.join()
+# print('join - 2')
 
 #  LifoQueue  先入后出
 # lq = LifoQueue()
@@ -246,16 +248,17 @@ def add2():
 
 # 主要使用 concurrent.futures  ThreadPoolExecutor, ProcessPoolExecutor
 # 线程池的使用
-# URLS = ['http://www.foxnews.com/',
-#         'http://www.baidu.com/',
-#         'http://europe.wsj.com/',
-#         'http://www.bbc.co.uk/',
-#         'http://some-made-up-domain.com/']
-#
-#
-# def load_url(url):
-#     result = requests.get(url)
-#     print('url:', url, result)
+URLS = ['http://www.foxnews.com/',
+        'http://www.baidu.com/',
+        'http://europe.wsj.com/',
+        'http://www.bbc.co.uk/',
+        'http://some-made-up-domain.com/']
+
+
+def load_url(url):
+    result = requests.get(url)
+    sleep(0.5)
+    print('url:', url, result)
 
 
 # max_workers 最多并发执行5个任务， 如有其余任务，会等待
@@ -266,19 +269,18 @@ def add2():
 #     # 等待所有线程执行结束
 #     tp.shutdown(wait=True)
 #     print('all are done')
-
-
 # print('--main thread--')
 
-# if __name__ == '__main__':
-#     with ProcessPoolExecutor(max_workers=5) as pp:
-#         # 提交任务给线程池， 第一个参数执行函数，之后参数为执行函数的参数
-#         pp.submit(load_url, URLS[0])
-#         pp.submit(load_url, URLS[1])
-#         # 等待所有线程执行结束
-#         pp.shutdown(wait=True)
-#         print('all are done')
-#     print('--main process--')
+
+if __name__ == '__main__':
+    with ProcessPoolExecutor(max_workers=5) as pp:
+        # 提交任务给线程池， 第一个参数执行函数，之后参数为执行函数的参数
+        pp.submit(load_url, URLS[0])
+        pp.submit(load_url, URLS[1])
+        # 等待所有线程执行结束
+        pp.shutdown(wait=True)
+        print('all are done')
+    print('--main process--')
 
 """=======homework============="""
 
@@ -298,6 +300,7 @@ def generate_data(queue):
         if queue.qsize() < 50:
             for dd in range(data, data + 200):
                 queue.put(dd)
+            print('generate data done')
             sleep(1)
 
 
@@ -306,18 +309,20 @@ def consume_data(queue):
         if queue.qsize() >= 10:
             for j in range(20):
                 queue.get()
+            print('consume data done')
         else:
             sleep(2)
 
 
-if __name__ == '__main__':
-    pass
-    my_queue = ProcessQueue()
-    with ProcessPoolExecutor(max_workers=6) as pool:
-        pool.submit(generate_data, my_queue)
-        for i in range(5):
-            pool.submit(consume_data, my_queue)
-        pool.shutdown()
+# if __name__ == '__main__':
+#     pass
+    # # my_queue = ProcessQueue()
+    # my_queue = Manager().Queue()
+    # with ProcessPoolExecutor(max_workers=6) as pool:
+    #     pool.submit(generate_data, my_queue)
+    #     for i in range(5):
+    #         pool.submit(consume_data, my_queue)
+    #     pool.shutdown()
 
     # my_queue = Queue()
     # with ThreadPoolExecutor(max_workers=6) as pool:
