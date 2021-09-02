@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 # @Time : 2021/8/31 20:27
 # @Author : Henry
+import asyncio
 import unittest
 from unittestreport import TestRunner
 from concurrent.futures.thread import ThreadPoolExecutor
+
 # from BeautifulReport import BeautifulReport
 
 # map函数
@@ -46,9 +48,23 @@ from concurrent.futures.thread import ThreadPoolExecutor
 
 
 """=========协程======"""
+
+
 # greenlet pip安装 greenlet
 # gevent pip安装
 
+# 原生协程  关键字 async await
+
+# 定义协程函数
+async def work():
+    for i in range(3):
+        print(i)
+
+
+# 调用协程函数，返回一个协程对象
+res = work()
+# 执行协程
+asyncio.run(res)
 
 """=============homework==============="""
 # 作业要求：通过线程池或者进程池，实现一个可以并发运行unittest测试用例的方法。
