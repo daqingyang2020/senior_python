@@ -4,8 +4,17 @@
 # @Author : Henry
 import socket
 
+# socket
+# 简称套接字， 是进程间(如两套独立系统)通信的一种方式， 它与其他进程间通信的一个主要不同是：
+# 它能实现不同主机间的进程通信（通过网络），我们网络上各式各样的服务大都是基于socket来完成通信的，如浏览网页，QQ聊天，收发email等
+
+# 创建socket
+# socket.socket(Family, Type)
+# Family: 可以选择socket.AF_INET(用于internet进程间通信)或者socket.AF_UNIX(用于同一台机器进程间通信)，实际工作常用AF_INET
+# Type: 套接字类型， 可以是socket.SOCK_STREAM(流式套接字，主要用于TCP协议) 或者 socket.SOCK_DGRAM(数据报套接字，主要用于UDP协议)
 
 
+#  实现TCP -- 传输层
 """==== 服务端 ===="""
 # # 第一步： 创建一个TCP的套接字
 # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
