@@ -199,17 +199,13 @@ class HTTPServer:
 
         request_content = content.decode()
         # 调用解析数据的方法，对请求的http数据包进行解析
-        self.parse_request(request_content)
+        body = self.parse_request(request_content)
         # print(content.decode())
-
         line = 'HTTP/1.1 200 OK\r\n'
         header = 'Content-Type: text/html\r\n'
         blank = '\r\n'
         # body = 'Connect successfully'
-        # 返回静态网页
-        # 读取网页内容， 拼接响应头和响应体
-        with open('reports/report.html', 'rb') as file:
-            body = file.read()
+
         response = line + header + blank
         # cil_sock.send(response.encode())
         cil_sock.send(response.encode() + body)
@@ -218,6 +214,7 @@ class HTTPServer:
     # 对客户端发来的请求的数据内容进行解析，作进一步处理
     def parse_request(self, content):
         # 正则匹配
+        response_body = None
         lines = content.split('\r\n')
         first = lines[0]
         # 1. 获取请求方法
@@ -232,15 +229,36 @@ class HTTPServer:
         body = content.split('\r\n\r\n')[1]
         # 判断是否有查询字符串参数
         if '?' in url:
-            url, params = url.split('?')
+            interface_url, params = url.split('?')
             pass
+        if '/user/login' in url:
+            if method == 'GET':
+                response_body = 'You should use POST to login'
+            else:
+                response_body = 'You can login'
+
+        elif '/user/logout' in url:
+            response_body = 'You logout'
+        elif '/test/result' in url:
+            # 返回静态网页
+            # 读取网页内容， 拼接响应头和响应体
+            with open('reports/report.html', 'r', encoding='utf-8') as file:
+                response_body = file.read()
+        else:
+            response_body = 'Nothing'
 
         # 判断是否有json参数， 看content-type
-        elif header['Content-Type'] == 'application/json':
+        if header_dict.get('Content-Type') == 'application/json':
             pass
         # 判断是否有表单参数， 看content-type
-        elif header['Content-Type'] == 'application/x-www-form-urlencoded':
+        elif header_dict.get('Content-Type') == 'application/x-www-form-urlencoded':
             pass
+        else:
+            pass
+        return response_body.encode()
+
+    def check_login(self):
+        pass
 
     def run(self):
         # 创建线程池,设置20个线程来处理请求
@@ -248,7 +266,8 @@ class HTTPServer:
             while True:
                 cil_sock, address = self.sock.accept()
                 # 当客户端建立连接后, 往线程池提交任务函数
-                pool.submit(self.handle_request, cil_sock, address)
+                # pool.submit(self.handle_request, cil_sock, address)
+                self.handle_request(cil_sock, address)
 
 
 if __name__ == '__main__':
