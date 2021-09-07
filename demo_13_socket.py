@@ -243,6 +243,7 @@ class HTTPServer:
             interface_url, params = url.split('?')
             pass
         # 根据url 进行判断，返回不同的响应结果
+        # 新思路 使用字典存储{'/login': '执行登录页面'}
         if '/user/login' in url:
             if method == 'GET':
                 response_body = 'You should use POST to login'
