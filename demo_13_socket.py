@@ -4,6 +4,7 @@
 # @Author : Henry
 import re
 import socket
+import json
 from concurrent.futures import ThreadPoolExecutor
 
 # socket
@@ -196,7 +197,6 @@ class HTTPServer:
             #  判断接收到的数据是否少于指定长度，小于则表示数据接收完毕
             if len(res) < 1024:
                 break
-
         request_content = content.decode()
         # 调用解析数据的方法，对请求的http数据包进行解析
         body = self.parse_request(request_content)
@@ -204,17 +204,13 @@ class HTTPServer:
         line = 'HTTP/1.1 200 OK\r\n'
         header = 'Content-Type: text/html\r\n'
         blank = '\r\n'
-        # body = 'Connect successfully'
-
         response = line + header + blank
-        # cil_sock.send(response.encode())
         cil_sock.send(response.encode() + body)
         cil_sock.close()
 
     # 对客户端发来的请求的数据内容进行解析，作进一步处理
     def parse_request(self, content):
         # 正则匹配
-        response_body = None
         lines = content.split('\r\n')
         first = lines[0]
         # 1. 获取请求方法
@@ -224,21 +220,34 @@ class HTTPServer:
         # 3. 获取请求头
         # 第一次从空白行处分割， 取首个元素继续分割从第二开始切片
         header = content.split('\r\n\r\n')[0].split('\r\n')[1:]
-        header_dict = {each.split(':')[0]: each.split(':')[1] for each in header}
+        header_dict = {each.split(':')[0]: each.split(':')[1].strip() for each in header}
         # 4. 获取请求参数
-        body = content.split('\r\n\r\n')[1]
+        body_temp = content.split('\r\n\r\n')[1]
+        # 判断是否有json参数， 看content-type
+        if header_dict.get('Content-Type') == 'application/json':
+            request_body = json.loads(body_temp)
+        # 判断是否有表单参数， 看content-type
+        elif header_dict.get('Content-Type') == 'application/x-www-form-urlencoded':
+            body = {}
+            body_list = body_temp.split('&')
+            for each in body_list:
+                item = each.split('=')
+                body.setdefault(*item)
+            else:
+                request_body = body
+        else:
+            request_body = body_temp
+
         # 判断是否有查询字符串参数
         if '?' in url:
             interface_url, params = url.split('?')
             pass
+        # 根据url 进行判断，返回不同的响应结果
         if '/user/login' in url:
             if method == 'GET':
                 response_body = 'You should use POST to login'
             else:
-                response_body = 'You can login'
-
-        elif '/user/logout' in url:
-            response_body = 'You logout'
+                response_body = self.check_login(method, '/user/login', request_body)
         elif '/test/result' in url:
             # 返回静态网页
             # 读取网页内容， 拼接响应头和响应体
@@ -246,19 +255,22 @@ class HTTPServer:
                 response_body = file.read()
         else:
             response_body = 'Nothing'
-
-        # 判断是否有json参数， 看content-type
-        if header_dict.get('Content-Type') == 'application/json':
-            pass
-        # 判断是否有表单参数， 看content-type
-        elif header_dict.get('Content-Type') == 'application/x-www-form-urlencoded':
-            pass
-        else:
-            pass
         return response_body.encode()
 
-    def check_login(self):
-        pass
+    def check_login(self, method, url, data):
+        """判断登录方法"""
+        if method == 'POST':
+            if url == '/user/login':
+                if data.get('name') == 'henry' and data.get('pwd') == 'henry123':
+                    result = {'code': 1, 'msg': '登录成功'}
+                else:
+                    result = {'code': 0, 'msg': '账号密码有误'}
+                response = json.dumps(result)
+            else:
+                response = 'URL not correct'
+        else:
+            response = 'Error method, please check!'
+        return response
 
     def run(self):
         # 创建线程池,设置20个线程来处理请求
@@ -302,3 +314,4 @@ Socket编程练习：
         4、在判断请求参数
         5、校验参数中的账号密码
 """
+# 见以上代码
