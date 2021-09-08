@@ -210,6 +210,10 @@ class HTTPServer:
 
     # 对客户端发来的请求的数据内容进行解析，作进一步处理
     def parse_request(self, content):
+        # 把提取的信息放入一个字典
+        info = {
+
+        }
         # 正则匹配
         lines = content.split('\r\n')
         first = lines[0]
@@ -243,7 +247,7 @@ class HTTPServer:
             interface_url, params = url.split('?')
             pass
         # 根据url 进行判断，返回不同的响应结果
-        # 新思路 使用字典存储{'/login': '执行登录页面'}
+        # 新思路 使用字典存储{'/': index, '/login': login} 路由思想
         if '/user/login' in url:
             if method == 'GET':
                 response_body = 'You should use POST to login'
