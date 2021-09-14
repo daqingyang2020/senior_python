@@ -6,6 +6,8 @@ import asyncio
 import unittest
 from unittestreport import TestRunner
 from concurrent.futures.thread import ThreadPoolExecutor
+from greenlet import greenlet
+import gevent
 
 # from BeautifulReport import BeautifulReport
 
@@ -50,7 +52,7 @@ from concurrent.futures.thread import ThreadPoolExecutor
 """=========协程======"""
 
 
-# greenlet pip安装 greenlet
+# greenlet pip安装
 # gevent pip安装
 
 # 原生协程  关键字 async await
@@ -66,6 +68,31 @@ res = work()
 # 执行协程
 asyncio.run(res)
 
+
+# greenlet
+
+# gevent
+def test1():
+    for i in range(3, 9):
+        print(i)
+    pass
+
+
+def test2():
+    for i in range(21, 27):
+        print(i)
+    pass
+
+
+# 任务函数加入协程
+g1 = gevent.spawn(test1)
+g2 = gevent.spawn(test2)
+
+# 任务函数等待并开始执行
+g1.join()
+g2.join()
+
+print('====over====')
 
 """线程  进程  协程 之间的对比"""
 # 1. 进程是操作系统资源分配的基本单位
