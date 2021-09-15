@@ -2,13 +2,15 @@
 # -*- coding: utf-8 -*-
 # @Time : 2021/8/31 20:27
 # @Author : Henry
+from gevent.monkey import patch_all
+# gevent.monkey调用补丁， 放置最前 ，不然MonkeyPatchWarning
+# patch_all()
 import asyncio
 import unittest
 from unittestreport import TestRunner
 from concurrent.futures.thread import ThreadPoolExecutor
 from greenlet import greenlet
 import gevent
-
 # from BeautifulReport import BeautifulReport
 
 # map函数
@@ -59,7 +61,7 @@ import gevent
 
 # 定义协程函数
 async def work():
-    for i in range(3):
+    for i in range(10, 13):
         print(i)
 
 
@@ -75,12 +77,16 @@ asyncio.run(res)
 def test1():
     for i in range(3, 9):
         print(i)
+        # 模拟i/o等耗时
+        gevent.sleep(.1)
     pass
 
 
 def test2():
     for i in range(21, 27):
         print(i)
+        # 模拟i/o等耗时
+        gevent.sleep(.2)
     pass
 
 
