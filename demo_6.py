@@ -108,7 +108,7 @@ print(id(d2), id(d1))
 #  上下文协议 ， 两种模式方法， __enter__, __exit__
 # with 是用来启动对象的上下文管理器
 
-with open('demo_5.py', 'r') as fi:
+with open('demo_5_decorator.py', 'r') as fi:
     print(fi)
     pass
 
