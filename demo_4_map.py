@@ -31,6 +31,10 @@ print(res2, list(res2))
 # 推导式也可以实现
 
 
+res3 = map(str, range(10))
+print(''.join(res3))
+
+
 # exec: 执行字符串中的python代码
 # eval: 识别字符串中有效表达式
 code = """
@@ -174,7 +178,8 @@ def work_demo():
 class TestDemo(unittest.TestCase):
 
     @data(11, 22, 33)
-    def test_login(self):
+    def test_login(self, case):
+        print(case)
         pass
 
 

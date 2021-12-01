@@ -50,7 +50,10 @@ def fibonacci(n):
         return fibonacci(n - 1) + fibonacci(n - 2)
 
 
-seq = fibonacci(1000)
+# 超过默认的递归深度
+# seq = fibonacci(1000)
+
+seq = fibonacci(100)
 print(seq, dic)
 print(sys.getrecursionlimit())  # 最大递归深度
 # fibonacci(1000)  # RecursionError: maximum recursion depth exceeded in comparison
@@ -85,7 +88,7 @@ class Demo:
 
     def __new__(cls, *args, **kwargs):
         if cls.__instance is None:
-            instance = super().__new__(cls)
+            instance = super().__new__(cls, *args, **kwargs)
             cls.__instance = instance
         return cls.__instance
 
@@ -94,7 +97,7 @@ d1 = Demo()
 # Demo.instance = None  # 修改属性
 # Demo.__instance = None  # 私有属性”不可修改“
 d2 = Demo()
-print(id(d2), id(d1))
+print('d2: ', id(d2), 'd1: ', id(d1))
 
 # 日志模块单例模式的实现
 #
