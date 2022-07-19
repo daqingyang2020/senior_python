@@ -8,7 +8,7 @@ from collections.abc import Generator
 
 # 将可迭代对象
 
-li1 = iter([11, 22, 33, 44])
+li1 = iter([11, 22, 33, 44, 55])
 print(li1.__length_hint__())  # 每次迭代后，长度减一
 print(li1.__setstate__(2))  # 设置迭代操作的迭代位置
 print(li1.__next__())
