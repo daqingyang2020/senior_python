@@ -6,12 +6,50 @@ from collections.abc import Iterable
 from collections.abc import Iterator
 from collections.abc import Generator
 
-# 将可迭代对象
+
+# 可迭代对象
+class MyList:
+    # 自定义的可迭代对象类
+    def __iter__(self):
+        # 内置函数 iter  - 返回迭代器
+        return iter([11, 22, 33])
+
+
+class MySequence:
+    # 自定义的序列类
+
+    def __getitem__(self, num):
+        #  索引取值 num是传入的索引值 对象使用索引取值表达式时如：item[0], 即调用此方法
+        # 可进行for语句迭代
+        print('number:', num)
+
+
+m = MyList()
+print(isinstance(m, Iterable))
+# m对象实现了__iter__方法(返回迭代器对象)，则是一个可迭代对象，可进行for语句迭代 for item in m:
+
+s = MySequence()
+# （实现了此方法__getitem__的对象被称为可迭代对象-支持迭代操作，但不是Iterable类型）
+print(isinstance(s, Iterable))
+
+dd = {'name': 'Henry', 'age': '20'}
+# 对字典取key:
+# dd.keys(), Iterable  # 是可迭代对象
+# dd.keys(), not Iterator  # 不是迭代器
+# iter(dd.keys()), Iterator  # 通过iter()来转换成迭代器 - 则实现了对其使用next()方法
+
 
 li1 = iter([11, 22, 33, 44, 55])
-print(li1.__length_hint__())  # 每次迭代后，长度减一
-print(li1.__setstate__(2))  # 设置迭代操作的迭代位置
+print(li1.__length_hint__())  # 可迭代对象内部包含的数据数量。每次迭代后，长度减一
+# 可以使用next(li1) 进行迭代，或者 li1.__next__() 进行迭代
+print(li1.__setstate__(2))  # 设置迭代操作时的迭代起始位置， 默认0
 print(li1.__next__())
+
+with open('demo_2.py', 'r', encoding='utf-8') as file:
+    res = iter(file.readlines())  # 大文件读取通过迭代器
+
+print(res)
+print(next(res))
 
 """
 1. 可迭代对象 （了解概念）
@@ -42,7 +80,9 @@ for j in gen_1:
 # 生成器函数：关键字yield
 def func_1():
     print('start')
-    yield 1122
+    yield 5
+    print('continue')
+    yield 10
     print('end')
 
 
@@ -51,17 +91,31 @@ def func_1():
 gen_2 = func_1()
 # 调用一次next() , 进入函数执行，遇到yield暂停返回数据
 # 再次调用next(), 继续从上次yield处继续执行，如此循环
-# 当函数执行完毕后则结束，不可再次next()
+# 调用next()后，若函数执行完毕后而未遇到yield，则会引发StopIteration - pytest的fixture函数在yield返回后进行执行代码（后置代码）
+print(next(gen_2))
 print(next(gen_2))
 
 
+# print(next(gen_2))
+
 # next(gen_2)
+
+#  生成器的特殊方法
+def func_01():
+    for i in range(20):
+        yield i
+
+
+g1 = func_01()
+
+print(next(g1))
 
 
 # 2 使用send方法使用迭代 , 第二种迭代方法
 def func_2():
     for i in range(100):
         out = yield i
+        print('out:', out)
 
 
 # 先使用next()启动生成器
@@ -69,11 +123,23 @@ def func_2():
 # 调用send的返回值是 yield后的值
 gen_3 = func_2()
 next(gen_3)
-res = gen_3.send(3)
-print('res:', res, 'next:', next(gen_3))
+res = gen_3.send(123)
+print('res:', res,
+      'next:', next(gen_3))
 
-#  --- 通过一个生成 {data: xxx} 的生成器
 
+# demo ---  生成一个 {'data': 'xxx'} 的生成器 xxx是传入的数据
+def demo_data():
+    resp = {'data': None, 'title': None}
+    for i in range(10, 13):
+        send_value = yield resp  # 返回内部定义的值, 在迭代完成（函数执行完成）之前，变量一直保存在内存中，
+        resp.update(data=send_value)
+        resp.update(title=str(i))
+
+
+gg = demo_data()
+print(next(gg))
+print(gg.send('Henry'))
 
 #  =============迭代器生成器作业=================
 """
@@ -118,6 +184,8 @@ print(gen_url.send('www.google.com'))
 print(gen_url.send('www.tencent.com'))
 print(gen_url.send('www.126.com'))
 print(gen_url.send('www.163.com'))
+
+
 # gen_url.send('www.yahoo.com')
 
 
@@ -143,6 +211,5 @@ def func(array, x):
 
 
 print(func([8, 2, 1, 5, 6, 6], 3))
-
 
 print(3200 * (1 - 1 / 1277 * 204))

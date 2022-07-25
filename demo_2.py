@@ -31,13 +31,13 @@
 # n = 3
 # result = 'ok' if n > 5 else 'not ok'
 #
-# list_3 = ['even' if i % 2 == 0 else 'odd' for i in range(100)]
-# print(list_3)
+list_3 = ['even' if i % 2 == 0 else 'odd' for i in range(10)]
+print(list_3)
 #
 # # ***********字典推导式*******************
 # # 基本字典推导式
-# dict_1 = {'key{}'.format(i): i for i in range(10)} # type 'dict'
-# print(dict_1)
+dict_1 = {'key{}'.format(i): i for i in range(10)}  # type 'dict'
+print(dict_1)
 # # 同样可以结合if ，或者三目运算符
 #
 #

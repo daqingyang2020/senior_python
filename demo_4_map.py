@@ -7,6 +7,29 @@ import unittest
 from ddt import ddt
 from ddt import data
 import time
+
+var = 100
+tar = [1, 3]
+
+
+# 纯函数
+def fun1(a, b):
+    """纯函数"""
+    return a + b
+
+
+def fun2(a):
+    """非纯函数， 返回值受外部数据影响"""
+    return var + a
+
+
+def fun3(a, b):
+    """非纯函数， 会修改外部环境数据"""
+    tar.append(a)
+    tar.append(b)
+    return a + b
+
+
 # 匿名函数， 一般给函数传参数
 # filter 函数： 过滤器
 #  参数1 过滤规则函数 --- 通常用匿名函数去写这个规则
@@ -26,14 +49,13 @@ print(res, list(res))
 
 st = [22, 11, 32]
 # 返回列表中数据的2次方
-res2 = map(lambda x: x**2, st)
+res2 = map(lambda x: x ** 2, st)
 print(res2, list(res2))
 # 推导式也可以实现
 
 
 res3 = map(str, range(10))
 print(''.join(res3))
-
 
 # exec: 执行字符串中的python代码
 # eval: 识别字符串中有效表达式
@@ -66,7 +88,6 @@ def work2(name=None, age=None, sex=None):
 
 work2('Henry')
 
-
 # zip函数: 聚合打包
 title = ['a', 'b', 'c']
 value = [1, 2, 3]
@@ -85,8 +106,8 @@ print(list(zip(aa, bb, cc)))
 
 cases = [
     ['case_id', 'case_title', 'url', 'data', 'excepted'],
- [4, '用例4', 'www.baidu.com', '002', 'ok'],
- [1, '用例1', 'www.baidu.com', '001', 'ok']
+    [4, '用例4', 'www.baidu.com', '002', 'ok'],
+    [1, '用例1', 'www.baidu.com', '001', 'ok']
 ]
 titles = cases[0]
 for i in cases[1:]:
@@ -115,12 +136,15 @@ def funcb1():
     def funcb2():
         c = x * 2
         print(c)
+
     return funcb2
 
 
 res = funcb1()
 print(res)
 res()
+
+
 # 无法直接在外部调用内部函数funcb2
 # 通过return把内部函数名返回, 然后调用
 # funcb2变量作用域 ， 内部的， funcb1的和全局的。
@@ -152,7 +176,6 @@ res()
 
 
 def decorator(func):
-
     def wrapper():
         print('wrapper --- start')
         print(func)  # 传进来的函数
@@ -165,6 +188,7 @@ def decorator(func):
 @decorator  # ----> work_demo = decorator(work_demo)
 def work_demo():
     print('work demo --- func')
+
 
 # 开放封闭原则
 # 开放封闭原则： 软件实体应该是可扩展的，而不可修改的。也就是说，对扩展是开放的，而对修改是封闭的。
@@ -210,7 +234,6 @@ def work2():
 
 work1()
 work2()
-
 
 """ -------------homework---------------"""
 
