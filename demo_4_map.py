@@ -30,7 +30,22 @@ def fun3(a, b):
     return a + b
 
 
-# 匿名函数， 一般给函数传参数
+# 匿名函数，定义：lambda 参数: 表达式
+# 一般给函数传递参数用， 也不建议通过变量接收lambda表达式
+def my_sort(n):
+    return n[1]
+
+
+# sorted 函数，sort方法， 给key传递排序规则
+a = [(6, 9), (1, 8), (3, 2)]
+a.sort()  # 默认按照列表每个元素中的第一个值进行排序
+print(a)
+b = sorted(a, key=my_sort)  # key参数不使用匿名函数，传递一个具有排序规则的函数。
+# 排序的时候将每个元素作为参数传递给此函数my_sort，此处传递函数名，排序时内部调用
+c = sorted(a, key=lambda x: x[1])  # 使用匿名函数， 排序时将列表中的每个元素当作参数传递给lambda函数
+a.sort(key=lambda x: x[1])
+print(a, b, c)
+
 # filter 函数： 过滤器
 #  参数1 过滤规则函数 --- 通常用匿名函数去写这个规则
 #  参数2 可迭代对象
@@ -67,7 +82,7 @@ print(a+b)
 exec(code)
 
 
-# all: 判断迭代对象内所有元素是否为真, 是则返回True
+# all: 判断迭代对象内所有元素是否都为真, 是则返回True
 def work(name=None, age=None, sex=None):
     if name and age and sex:
         print('True 1')
@@ -92,6 +107,13 @@ work2('Henry')
 title = ['a', 'b', 'c']
 value = [1, 2, 3]
 
+# 普通写法， 以title的元素为键，value的元素为值形成字典
+# dic = {}
+# for i in range(len(title)):
+#     dic[title[i]] = value[i]
+# print(dic)
+
+# 使用zip
 print(dict(zip(title, value)))
 print(
     dict(
@@ -234,33 +256,3 @@ def work2():
 
 work1()
 work2()
-
-""" -------------homework---------------"""
-
-# 1、通过上述上课所学内置函数和推导式的语法，读取附件中excel文件，转换为如下的格式：
-# res1 = [ {'case_id': 1, 'case_title': '用例1', 'url': 'www.baudi.com', 'data': '001', 'excepted': 'ok'},
-#  {'case_id': 4, 'case_title': '用例4', 'url': 'www.baudi.com', 'data': '002', 'excepted': 'ok'},
-#  {'case_id': 2, 'case_title': '用例2', 'url': 'www.baudi.com', 'data': '002', 'excepted': 'ok'},
-#  {'case_id': 3, 'case_title': '用例3', 'url': 'www.baudi.com', 'data': '002', 'excepted': 'ok'},
-#  {'case_id': 5, 'case_title': '用例5', 'url': 'www.baudi.com', 'data': '002', 'excepted': 'ok'} ]
-# 2、对第一题读取出来的数据，按照case_id字段进行排序。
-# 3、将读取出来的数据中的method字段值 统一修改为GET（不需要修改excel，只对读出来的数据进行修改）
-# 1.
-book = openpyxl.load_workbook('data.xlsx')
-sheet = book.active
-lines = sheet.values
-title = next(lines)
-res1 = []
-for each in lines:
-    res1.append(dict(zip(title, each)))
-
-# 2.
-res1.sort(key=lambda x: x['case_id'])
-print(res1)
-
-# 3.
-for it in res1:
-    it['method'] = 'GET'
-print(res1)
-
-result2 = [item.update({'method': 'GET'}) or item for item in res1]
