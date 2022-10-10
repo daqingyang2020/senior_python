@@ -20,13 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1c569e5-5beb-4af7-8102-9dbce89d3c9b" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/senior_python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/senior_python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/exercise/exercise_7.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_10.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_11.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_11_queue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_5.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_5_decorator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_8.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_8_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_6_magic.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_6_magic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_7.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reports/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/history.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +38,15 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>s</find>
-    </findStrings>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="develop" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1wZbmOKJ10XZMWahfBMnTRRticp" />
@@ -58,18 +59,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\senior_python" />
+      <recent name="D:\Projects\senior_python\exercise" />
       <recent name="F:\BaiduNetdiskWorkspace\test_development\senior_python\unitcase" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\BaiduNetdiskWorkspace\test_development\senior_python" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.demo_12">
-    <configuration name="demo_11_queue" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.test_">
+    <configuration name="abc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -81,7 +84,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="F:\BaiduNetdiskWorkspace\test_development\senior_python\demo_11_queue.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/abc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,7 +93,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="demo_6_magic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,7 +105,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_12.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_6_magic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +114,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_8_type" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="exercise_5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="senior_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/exercise" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exercise/exercise_5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -123,7 +147,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="F:\BaiduNetdiskWorkspace\test_development\senior_python\demo_8_type.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,28 +156,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_9" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="senior_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_9.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in demo_12.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test_.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,24 +166,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/demo_12.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.demo_12" />
-      <item itemvalue="Python.demo_9" />
-      <item itemvalue="Python tests.Unittests in demo_12.py" />
-      <item itemvalue="Python.demo_8_type" />
-      <item itemvalue="Python.demo_11_queue" />
+      <item itemvalue="Python.exercise_5" />
+      <item itemvalue="Python.test_" />
+      <item itemvalue="Python.abc" />
+      <item itemvalue="Python.demo_6_magic" />
+      <item itemvalue="Python tests.Unittests in test_.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.demo_12" />
-        <item itemvalue="Python tests.Unittests in demo_12.py" />
-        <item itemvalue="Python.demo_11_queue" />
-        <item itemvalue="Python.demo_9" />
-        <item itemvalue="Python.demo_8_type" />
+        <item itemvalue="Python.test_" />
+        <item itemvalue="Python.demo_6_magic" />
+        <item itemvalue="Python.abc" />
+        <item itemvalue="Python.exercise_5" />
+        <item itemvalue="Python tests.Unittests in test_.py" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +276,35 @@
       <option name="project" value="LOCAL" />
       <updated>1631700825562</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update">
+      <created>1658211966782</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1658211966782</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update 55">
+      <created>1658213326263</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1658213326263</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update">
+      <created>1658712987453</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1658712987454</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update">
+      <created>1664528091292</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664528091293</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -314,83 +345,86 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
+    <MESSAGE value="update 55" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="431" y="282" key="#Notifications" timestamp="1630575410615">
+    <state x="138" y="169" width="1089" height="742" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1662361064331">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="431" y="282" key="#Notifications/0.0.1440.920@0.0.1440.920" timestamp="1630575410615" />
-    <state x="161" y="204" width="1089" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629785015855">
+    <state x="138" y="169" width="1089" height="742" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1662361064331" />
+    <state x="451" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1664529402945">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="161" y="204" width="1089" height="716" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1629785015855" />
-    <state x="363" y="267" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1629691767622" />
-    <state x="363" y="267" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.920@0.0.1440.920" timestamp="1629691767622" />
-    <state x="286" y="313" width="640" height="598" key="#xdebugger.evaluate" timestamp="1630572233808">
+    <state x="451" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.920@0.0.1440.920" timestamp="1664529402945" />
+    <state x="570" y="289" width="628" height="589" key="#xdebugger.evaluate" timestamp="1662363849842">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="286" y="313" width="640" height="598" key="#xdebugger.evaluate/0.0.1440.920@0.0.1440.920" timestamp="1630572233808" />
-    <state x="73" y="162" width="1240" height="717" key="DiffContextDialog" timestamp="1629707433108">
+    <state x="570" y="289" width="628" height="589" key="#xdebugger.evaluate/0.0.1440.920@0.0.1440.920" timestamp="1662363849842" />
+    <state x="93" y="93" width="1255" height="735" key="DiffContextDialog" timestamp="1658213320885">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="73" y="162" width="1240" height="717" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1629707433108" />
-    <state width="1419" height="361" key="GridCell.Tab.0.bottom" timestamp="1631688127301">
+    <state x="93" y="93" width="1255" height="735" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1658213320885" />
+    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1662110548865">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="361" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1631688127301" />
-    <state width="1419" height="361" key="GridCell.Tab.0.center" timestamp="1631688127301">
+    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1662110548865" />
+    <state width="1419" height="171" key="GridCell.Tab.0.bottom" timestamp="1665385039928">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="361" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1631688127301" />
-    <state width="1419" height="361" key="GridCell.Tab.0.left" timestamp="1631688127301">
+    <state width="1419" height="171" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1665385039928" />
+    <state width="1419" height="171" key="GridCell.Tab.0.center" timestamp="1665385039927">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="361" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1631688127301" />
-    <state width="1419" height="361" key="GridCell.Tab.0.right" timestamp="1631688127301">
+    <state width="1419" height="171" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1665385039927" />
+    <state width="1419" height="171" key="GridCell.Tab.0.left" timestamp="1665385039927">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="361" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1631688127301" />
-    <state width="1419" height="321" key="GridCell.Tab.1.bottom" timestamp="1630634575609">
+    <state width="1419" height="171" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1665385039927" />
+    <state width="1419" height="171" key="GridCell.Tab.0.right" timestamp="1665385039928">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="321" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1630634575609" />
-    <state width="1419" height="321" key="GridCell.Tab.1.center" timestamp="1630634575609">
+    <state width="1419" height="171" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1665385039928" />
+    <state width="1419" height="320" key="GridCell.Tab.1.bottom" timestamp="1665372374798">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="321" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1630634575609" />
-    <state width="1419" height="321" key="GridCell.Tab.1.left" timestamp="1630634575609">
+    <state width="1419" height="320" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1665372374798" />
+    <state width="1419" height="320" key="GridCell.Tab.1.center" timestamp="1665372374798">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="321" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1630634575609" />
-    <state width="1419" height="321" key="GridCell.Tab.1.right" timestamp="1630634575609">
+    <state width="1419" height="320" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1665372374798" />
+    <state width="1419" height="320" key="GridCell.Tab.1.left" timestamp="1665372374798">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="1419" height="321" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1630634575609" />
-    <state x="386" y="173" key="SettingsEditor" timestamp="1630577847510">
+    <state width="1419" height="320" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1665372374798" />
+    <state width="1419" height="320" key="GridCell.Tab.1.right" timestamp="1665372374798">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="386" y="173" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1630577847510" />
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1631700829256">
+    <state width="1419" height="320" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1665372374798" />
+    <state x="34" y="89" width="1386" height="772" key="MergeDialog" timestamp="1658213406854">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1631700829256" />
-    <state width="727" height="417" key="XDebugger.FullValuePopup" timestamp="1630572225735">
+    <state x="34" y="89" width="1386" height="772" key="MergeDialog/0.0.1440.920@0.0.1440.920" timestamp="1658213406854" />
+    <state x="315" y="371" key="MultipleFileMergeDialog" timestamp="1658213406861">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state width="727" height="417" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1630572225735" />
-    <state x="516" y="372" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1631096348544">
+    <state x="315" y="371" key="MultipleFileMergeDialog/0.0.1440.920@0.0.1440.920" timestamp="1658213406861" />
+    <state x="215" y="104" key="SettingsEditor" timestamp="1664528186495">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="516" y="372" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.920@0.0.1440.920" timestamp="1631096348544" />
-    <state x="276" y="192" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1630571090789">
+    <state x="215" y="104" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1664528186495" />
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1664528403108">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="276" y="192" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1440.920@0.0.1440.920" timestamp="1630571090789" />
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1630577639700">
+    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1664528403108" />
+    <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1662363849728">
       <screen x="0" y="0" width="1440" height="920" />
     </state>
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1630577639700" />
+    <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1662363849728" />
+    <state x="526" y="354" key="git4idea.ui.GitResetDialog" timestamp="1658212441310">
+      <screen x="0" y="0" width="1440" height="920" />
+    </state>
+    <state x="526" y="354" key="git4idea.ui.GitResetDialog/0.0.1440.920@0.0.1440.920" timestamp="1658212441310" />
   </component>
 </project>

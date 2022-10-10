@@ -8,6 +8,9 @@ import random
 from functools import wraps
 from functools import lru_cache
 
+import alpha
+
+
 #  内置装饰器 官方
 # 1. functools.wraps: 用来消除装饰器的副作用(装饰后函数的名称，属性等不是原函数的)
 # 2. functools.lru_cashe: 缓存装饰器， 一般用在递归上， 相同入参的函数结果缓存起来， 做到不重复调用
@@ -17,7 +20,6 @@ from functools import lru_cache
 
 
 def star(come):
-
     @wraps(come)  # 把wrap(func)修饰在闭包函数上
     def wrapper():
         come()
@@ -37,7 +39,6 @@ def cook():
 cook()
 print(cook.__doc__)  # 文档字符串注释 - 使用@star修饰函数且未使用wraps修饰时 -- 文档字符串注释为空
 print(cook.__name__)  # 函数名 - 使用@star修饰函数未使用wraps修饰时 -- 函数名执行是闭包函数wrapper
-
 
 dic = dict(count=0)
 
@@ -151,7 +152,7 @@ class OpenFile:
 new_file = OpenFile('albert.py', 'w')
 with new_file as ff:  # new_file 对象实现了__enter__ 和 __exit__ 即可
     ff.write('print("hello world")')
-    print(undefined_name)
+    # print(undefined_name)
 
 
 # 上下文协议应用场景：数据库连接关闭，文件操作，webdriver操作， requests.session等
@@ -163,6 +164,7 @@ class Definitely:
     # 类中实现__call__方法
     def __call__(self, *args, **kwargs):
         print('call definitely')
+
     pass
 
 
@@ -199,3 +201,11 @@ def function():
 
 function()
 
+
+# 装饰器扩展 @xxx.xxx.xxx - 模块.对象.方法
+@alpha.mark.play
+def my_test():
+    print('My Test')
+
+
+my_test()
