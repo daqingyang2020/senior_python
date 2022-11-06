@@ -7,37 +7,19 @@ import unittest
 from time import sleep
 
 
-class Terminal(unittest.TestCase):
+class TestTerminal(unittest.TestCase):
 
-    def testone(self):
+    def test_one(self):
         print('Test one')
         sleep(0.3)
         assert 1 == 1
 
-    def testtwo(self):
+    def test_two(self):
         print('Test tow')
         sleep(0.3)
-        assert 1 == 2
+        assert 1 != 2
 
-    def testthree(self):
+    def test_three(self):
         print('Test three')
-        sleep(0.3)
-        assert 2 == 2
-
-
-class Emulator(unittest.TestCase):
-
-    def test1(self):
-        print('Test 1')
-        sleep(0.3)
-        assert 1 == 1
-
-    def test2(self):
-        print('Test 2')
-        sleep(0.3)
-        assert 2 == 2
-
-    def test3(self):
-        print('Test 3')
         sleep(0.3)
         assert 2 == 2

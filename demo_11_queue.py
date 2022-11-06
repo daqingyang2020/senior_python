@@ -50,7 +50,7 @@ q = Queue(2)  # 若满了,会阻塞
 # q.full()
 # print('--')
 # task_done , join
-# task_done 先队列发出一条任务完成的信号
+# task_done 向队列发出一条任务完成的信号
 # join 等待队列中的任务执行全部完毕
 # qq = Queue(3)
 # qq.put(11)

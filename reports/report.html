@@ -851,21 +851,21 @@ test_two (test_.TestDemo)执行——>【通过】
     // 当选择用例类之后触发
     testClass.change(function () {
         $('.test_log').hide();
-        var cls = $(this).val();
+        var mcs = $(this).val();
         var res = testResult.val();
-        elementDisplay(cls, res);
+        elementDisplay(mcs, res);
         sort()
     });
     testResult.change(function () {
         var res = $(this).val();
-        var cls = testClass.val();
-        elementDisplay(cls, res);
+        var mcs = testClass.val();
+        elementDisplay(mcs, res);
         sort()
     });
 
-    function elementDisplay(cls, res) {
+    function elementDisplay(mcs, res) {
         // 用例数据的显示
-        if (cls === "所有") {
+        if (mcs === "所有") {
             if (res === "所有") {
                 tbodyTr.has('button').show();
             } else if (res === '成功') {
@@ -887,19 +887,19 @@ test_two (test_.TestDemo)执行——>【通过】
         } else {
             if (res === "所有") {
                 tbodyTr.hide();
-                tbodyTr.has('button').has('.' + cls + '').show()
+                tbodyTr.has('button').has('.' + mcs + '').show()
             } else if (res === '成功') {
                 tbodyTr.hide();
-                tbodyTr.has('button').has('.' + cls + '').has('.text-success').show()
+                tbodyTr.has('button').has('.' + mcs + '').has('.text-success').show()
             } else if (res === '错误') {
                 tbodyTr.hide();
-                tbodyTr.has('button').has('.' + cls + '').has('.text-danger').show()
+                tbodyTr.has('button').has('.' + mcs + '').has('.text-danger').show()
             } else if (res === '失败') {
                 tbodyTr.hide();
-                tbodyTr.has('button').has('.' + cls + '').has('.text-warning').show()
+                tbodyTr.has('button').has('.' + mcs + '').has('.text-warning').show()
             } else if (res === '跳过') {
                 tbodyTr.hide();
-                tbodyTr.has('button').has('.' + cls + '').has('.text-info').show()
+                tbodyTr.has('button').has('.' + mcs + '').has('.text-info').show()
             }
         }
     }
