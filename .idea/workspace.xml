@@ -20,11 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1c569e5-5beb-4af7-8102-9dbce89d3c9b" name="Default Changelist" comment="update">
-      <change afterPath="$PROJECT_DIR$/exercise/exercise_7.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo_13_HTTPServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/senior_python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/senior_python.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_6_magic.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_6_magic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/history.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_10.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_10_thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_12.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_12_coroutine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_13_socket.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_13_socket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_2_comprehensions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_3_iterator.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_3_iterator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_7.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_7_attribute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo_9.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo_9_memory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/exercise_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/exercise_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,9 +65,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -72,7 +81,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.test_">
-    <configuration name="abc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="demo_13_HTTPServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,7 +93,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/abc.py" />
+      <option name="SCRIPT_NAME" value="D:\Projects\senior_python\demo_13_HTTPServer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -93,28 +102,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo_6_magic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="senior_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo_6_magic.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="exercise_5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="exercise_10" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="senior_python" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -126,7 +114,49 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exercise/exercise_5.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exercise/exercise_10.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exercise_12" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="senior_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/exercise" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exercise/exercise_12.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="exercise_9" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="senior_python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/exercise" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/exercise/exercise_9.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -156,34 +186,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="senior_python" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test_.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.exercise_5" />
+      <item itemvalue="Python.demo_13_HTTPServer" />
+      <item itemvalue="Python.exercise_10" />
+      <item itemvalue="Python.exercise_12" />
+      <item itemvalue="Python.exercise_9" />
       <item itemvalue="Python.test_" />
-      <item itemvalue="Python.abc" />
-      <item itemvalue="Python.demo_6_magic" />
-      <item itemvalue="Python tests.Unittests in test_.py" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.test_" />
-        <item itemvalue="Python.demo_6_magic" />
-        <item itemvalue="Python.abc" />
-        <item itemvalue="Python.exercise_5" />
-        <item itemvalue="Python tests.Unittests in test_.py" />
+        <item itemvalue="Python.demo_13_HTTPServer" />
+        <item itemvalue="Python.exercise_12" />
+        <item itemvalue="Python.exercise_10" />
+        <item itemvalue="Python.exercise_9" />
       </list>
     </recent_temporary>
   </component>
@@ -304,7 +320,35 @@
       <option name="project" value="LOCAL" />
       <updated>1664528091293</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update">
+      <created>1665385353605</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665385353605</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update">
+      <created>1665385453218</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1665385453218</updated>
+    </task>
+    <task id="LOCAL-00018" summary="update">
+      <created>1667743797461</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1667743797461</updated>
+    </task>
+    <task id="LOCAL-00019" summary="update">
+      <created>1668832253543</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1668832253543</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -348,83 +392,5 @@
     <MESSAGE value="update 55" />
     <MESSAGE value="update" />
     <option name="LAST_COMMIT_MESSAGE" value="update" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="138" y="169" width="1089" height="742" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1662361064331">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="138" y="169" width="1089" height="742" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1662361064331" />
-    <state x="451" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1664529402945">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="451" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.920@0.0.1440.920" timestamp="1664529402945" />
-    <state x="570" y="289" width="628" height="589" key="#xdebugger.evaluate" timestamp="1662363849842">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="570" y="289" width="628" height="589" key="#xdebugger.evaluate/0.0.1440.920@0.0.1440.920" timestamp="1662363849842" />
-    <state x="93" y="93" width="1255" height="735" key="DiffContextDialog" timestamp="1658213320885">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="93" y="93" width="1255" height="735" key="DiffContextDialog/0.0.1440.920@0.0.1440.920" timestamp="1658213320885" />
-    <state x="501" y="215" key="FileChooserDialogImpl" timestamp="1662110548865">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="501" y="215" key="FileChooserDialogImpl/0.0.1440.920@0.0.1440.920" timestamp="1662110548865" />
-    <state width="1419" height="171" key="GridCell.Tab.0.bottom" timestamp="1665385039928">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1419" height="171" key="GridCell.Tab.0.bottom/0.0.1440.920@0.0.1440.920" timestamp="1665385039928" />
-    <state width="1419" height="171" key="GridCell.Tab.0.center" timestamp="1665385039927">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1419" height="171" key="GridCell.Tab.0.center/0.0.1440.920@0.0.1440.920" timestamp="1665385039927" />
-    <state width="1419" height="171" key="GridCell.Tab.0.left" timestamp="1665385039927">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1419" height="171" key="GridCell.Tab.0.left/0.0.1440.920@0.0.1440.920" timestamp="1665385039927" />
-    <state width="1419" height="171" key="GridCell.Tab.0.right" timestamp="1665385039928">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1419" height="171" key="GridCell.Tab.0.right/0.0.1440.920@0.0.1440.920" timestamp="1665385039928" />
-    <state width="1419" height="320" key="GridCell.Tab.1.bottom" timestamp="1665372374798">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1419" height="320" key="GridCell.Tab.1.bottom/0.0.1440.920@0.0.1440.920" timestamp="1665372374798" />
-    <state width="1419" height="320" key="GridCell.Tab.1.center" timestamp="1665372374798">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1419" height="320" key="GridCell.Tab.1.center/0.0.1440.920@0.0.1440.920" timestamp="1665372374798" />
-    <state width="1419" height="320" key="GridCell.Tab.1.left" timestamp="1665372374798">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1419" height="320" key="GridCell.Tab.1.left/0.0.1440.920@0.0.1440.920" timestamp="1665372374798" />
-    <state width="1419" height="320" key="GridCell.Tab.1.right" timestamp="1665372374798">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="1419" height="320" key="GridCell.Tab.1.right/0.0.1440.920@0.0.1440.920" timestamp="1665372374798" />
-    <state x="34" y="89" width="1386" height="772" key="MergeDialog" timestamp="1658213406854">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="34" y="89" width="1386" height="772" key="MergeDialog/0.0.1440.920@0.0.1440.920" timestamp="1658213406854" />
-    <state x="315" y="371" key="MultipleFileMergeDialog" timestamp="1658213406861">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="315" y="371" key="MultipleFileMergeDialog/0.0.1440.920@0.0.1440.920" timestamp="1658213406861" />
-    <state x="215" y="104" key="SettingsEditor" timestamp="1664528186495">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="215" y="104" key="SettingsEditor/0.0.1440.920@0.0.1440.920" timestamp="1664528186495" />
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2" timestamp="1664528403108">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="313" y="193" key="Vcs.Push.Dialog.v2/0.0.1440.920@0.0.1440.920" timestamp="1664528403108" />
-    <state width="727" height="467" key="XDebugger.FullValuePopup" timestamp="1662363849728">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state width="727" height="467" key="XDebugger.FullValuePopup/0.0.1440.920@0.0.1440.920" timestamp="1662363849728" />
-    <state x="526" y="354" key="git4idea.ui.GitResetDialog" timestamp="1658212441310">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="526" y="354" key="git4idea.ui.GitResetDialog/0.0.1440.920@0.0.1440.920" timestamp="1658212441310" />
   </component>
 </project>

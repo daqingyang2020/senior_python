@@ -45,7 +45,7 @@ print(li1.__length_hint__())  # 可迭代对象内部包含的数据数量。每
 print(li1.__setstate__(2))  # 设置迭代操作时的迭代起始位置， 默认0
 print(li1.__next__())
 
-with open('demo_2.py', 'r', encoding='utf-8') as file:
+with open('demo_2_comprehensions.py', 'r', encoding='utf-8') as file:
     res = iter(file.readlines())  # 大文件读取通过迭代器
 
 print(res)

@@ -10,13 +10,24 @@ import random
 # 1、通过装饰器实现单例模式，只要任意一个类使用该装饰器装饰， 那么就会变成一个单例模式的类。(面试真题)
 # 函数实现
 def single(cls):
-    def inner(*args):
+    def inner(*args, **kwargs):
         if not hasattr(cls, 'instance'):  # 不能直接用cls.instance判断，因为可能没有这个属性
-            res = cls(*args)
+            res = cls(*args, **kwargs)
             cls.instance = res  # 设置属性，cls.instance这个形式来设置属性，或者使用setattr
         return cls.instance  # 或getattr
-
     return inner
+
+
+def singleton(cls):
+    instance = {}
+
+    def wrapper(*args, **kwargs):
+        if not instance:
+            obj = cls(*args, **kwargs)
+            instance.setdefault(cls, obj)
+        return instance[cls]
+
+    return wrapper
 
 
 # 类实现
@@ -37,7 +48,7 @@ class Psycho:
     def __init__(self, *args):
         print(args)
 
-    pass
+# 注： 被装饰后的类无法被继承
 
 
 c1 = Psycho(234)

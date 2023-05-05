@@ -4,7 +4,8 @@
 # @Author : Henry
 
 # xx.xx的装饰器
-
+# 装饰器扩展 @xxx.yyy.zzz - 模块.对象.方法
+# 模块中定义类，对象方法为装饰器函数，模块中实例化类对象
 
 # __str__方法
 class MyTest:
